@@ -24,8 +24,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
     public void calculatorTest() {
         np.open()
                 .register()
-            .enterEmail()
-        .enterPassword();
+                .enterEmail("angry.tester2018@gmail.com")
+                .enterPassword("123456")
+                .login()
+                .clickPublicNote()
+                .clickPrivatNote()
+                .close()
+                .setTitle("My New Note")
+                .save();
     }
     @After
     public void closeBrowser() { driver.quit(); } }
